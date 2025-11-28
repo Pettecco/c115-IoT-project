@@ -1,0 +1,23 @@
+{
+  "name": "c115-iot-project",
+  "version": "1.0.0",
+  "description": "ESP32-like device simulator publishing Temperature, Noise, Light and IEA to Blynk Cloud via MQTT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "TZ=America/Sao_Paulo node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "dayjs": "^1.11.19",
+    "dotenv": "^17.2.3",
+    "minimist": "^1.2.8",
+    "mqtt": "^5.14.1",
+    "nodemon": "^3.1.11",
+    "pino": "^10.1.0",
+    "pino-pretty": "^13.1.2"
+  }
+}
