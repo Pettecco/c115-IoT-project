@@ -33,11 +33,16 @@ export default function realisticScenario() {
   // ---------------------------
   // RUÍDO (picos aleatórios)
   // ---------------------------
+  // baseline 50 dB
+  currentNoise += (50 - currentNoise) * 0.05;
+
+  // picos aleatórios
   if (Math.random() < 0.1) {
-    currentNoise += 15 + Math.random() * 10; // pico repentino
+    currentNoise += 10 + Math.random() * 15;
   } else {
-    currentNoise += (Math.random() - 0.5) * 2; // variação normal
+    currentNoise += (Math.random() - 0.5) * 2;
   }
+
   currentNoise = Math.min(Math.max(currentNoise, 35), 100);
 
   // ---------------------------
